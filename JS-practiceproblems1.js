@@ -274,3 +274,35 @@ var changedletter = x.charCodeAt(0);
   }
 }).join("");
 };
+
+
+//Count words in a string
+function wordsInString(string) {
+
+  var counter = 0;
+  string.split(" ").forEach(function (x) {
+
+    counter++;
+
+  });
+
+  return counter;
+
+}
+
+//Palindrome function check
+
+function palindrome(string) {
+
+  if (string === string.split("").reverse().join("")) {
+    return true;
+  }
+
+  else {
+    return false;
+  }
+
+}
+
+
+
