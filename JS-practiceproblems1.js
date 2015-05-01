@@ -88,6 +88,18 @@ function reverseString (string) {
   return string.split("").reverse().join("");
 }
 
+//Reverse order of words
+function reverseWords (string) {
+
+  return string.split(" ").reverse().join(" ");
+}
+
+//Reverse letters in string AND order
+function reverseWordsOrder (string) {
+
+  return string.split("").reverse().join("");
+}
+
 
 //Write a function, 'unique', that takes an array and returns unique (only one instance, removes duplicates) 
 //elements of the array
@@ -167,15 +179,6 @@ function titlelize (string) {
 
 //sampleAJAX Post
 
-function sillySum () {
-
-
-}
-
-
-function numSquare () {
-
-}
 
 function isPrime (num) {
 
@@ -304,5 +307,54 @@ function palindrome(string) {
 
 }
 
+
+//Largest number in array should equal the sum of the array
+function largestNumberAdd (array) {
+
+
+    var largest = array.sort(function(a,b){return b-a;})[0];
+    console.log("testing for the largest number",largest);
+
+
+    var add = function (a, b) { 
+              return a + b; 
+            };
+
+
+   var sumNums = array.reduce(add);
+   console.log("sum of array should be 6", sumNums);
+
+   
+   if (largest === sumNums) {
+    return true;
+   }
+
+   else {
+    return false;
+   }
+  
+}
+
+
+//Sum of two, first parameter is array, second parameter is sum you want to expect 
+//([x, y, z], a)  ---- if [x + y + z] === a?
+
+function addArray (array, expectedTotal) {
+
+  var add = function (a, b) { return a + b; };
+  var total = array.reduce(add);
+
+  if (total === expectedTotal) {
+    return true;
+  }
+
+  else {
+    return false;
+  }
+
+}
+
+
+//Count Zeros in a number, from 1 to n
 
 
