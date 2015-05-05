@@ -358,3 +358,92 @@ function addArray (array, expectedTotal) {
 //Count Zeros in a number, from 1 to n
 
 
+function phoneNumber (array) {
+    var first = array.slice(0,3).join("");
+    var second = array.slice(3,6).join("");
+    var third = array.slice(6,10).join("");
+    
+    return "(" + first + ")" + " " + second + " " + "-" + " " + third; 
+}
+
+phoneNumber([1,2,3,4,5,6,7,8,9,0]); // (123) 456 - 7890
+
+function phoneNumber (array) {
+
+  return "(" + array.slice(0,3).join("") + ")" + " " + array.slice(3,6).join("") + " " + "-" + " " + array.slice(6,10).join("");
+
+}
+
+
+//Facebook Likes
+
+
+function facebookLikes (array) {
+
+  var length = array.length;
+
+  var name1 = array[0];
+  var name2 = array[1];
+  var remaining = length - 2;
+
+  if (length === 2 || length === 1) {
+
+    return name1 + " and " + name2 + " " + "like this.";
+  } 
+
+  if (length === 3) {
+
+    return name1 + ", " + name2 + ", and " + " 1 other person likes this.";
+  }
+
+  if (length > 3) {
+
+    return name1 + ", " + name2 + ", and " + remaining + " people like this.";
+  }
+
+  if (length === 0) {
+    return "No one likes this.";
+  }
+}
+
+//Prime Numbers 
+
+
+//"Hi there" ==> "ih ereht"
+
+function reverseWords(string) {
+  
+  var a = string.split(" ");
+  
+ return a.map(function (x) {
+      return x.split("").reverse().join("");
+      
+  }).join(" ");
+  
+}
+
+function isPangram (string) {
+
+  var letters = string.split("");
+  var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  
+  console.log("This is your string", letters);
+  console.log("This is the alphabet", alphabet);
+
+
+  for (var i in alphabet) {
+
+    if (typeof alphabet[i] == letters)  {
+
+      return true;
+    }
+
+  }
+
+  return false;
+
+}
+
+
+  
+
