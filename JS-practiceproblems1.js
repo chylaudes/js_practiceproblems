@@ -422,6 +422,8 @@ function reverseWords(string) {
   
 }
 
+//The quick brown foxes jumps over the lazy dog ==> return true
+
 function isPangram (string) {
 
   var letters = string.split("");
@@ -437,13 +439,38 @@ function isPangram (string) {
 
       return true;
     }
-
+    return false;
   }
 
-  return false;
+  
 
 }
 
 
+
+function isPangram (string) {
+
+
+
+  var letters = string.toLowerCase().split(" ").join("").split("");
+  var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+  return letters.every(function (x) {
+    if (alphabet.indexOf(x) !== -1 ) {
+      return true; 
+    }
+
+    else {
+      return false;
+    }
+  });
+
+ 
+
+
+}
+
+function duplicateEncoder (string) {
+}
   
 
